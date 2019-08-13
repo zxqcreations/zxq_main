@@ -1,0 +1,9 @@
+{% if all_text %}
+    <ul>
+    {% for text in all_text %}
+        <li><a href="/tools/{{ text.data_series_number }}/">{{ text.data_content }}{{ text.data_time }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
