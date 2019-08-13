@@ -1,2 +1,23 @@
 venv 
 .idea 
+zxq_main/node_modules
+zxq_main/.pnp
+zxq_main/.pnp.js
+
+# testing
+zxq_main/coverage
+
+# production
+zxq_main/build
+
+# misc
+zxq_main/.DS_Store
+zxq_main/.env.local
+zxq_main/.env.development.local
+zxq_main/.env.test.local
+zxq_main/.env.production.local
+
+zxq_main/npm-debug.log*
+zxq_main/yarn-debug.log*
+zxq_main/yarn-error.log*
+zxq_main/package-lock.json

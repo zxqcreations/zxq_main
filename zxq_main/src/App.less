@@ -1,0 +1,91 @@
+.App {
+  position: relative;
+  background: linear-gradient(90deg, rgba(25,118,210,1) 0%, rgba(3,169,244,1) 47%, rgba(33,150,243,1) 100%);
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background: linear-gradient(90deg,  #F29CB1 0%, #F19EC2 50%, #F29CB1 100%);
+  min-height: 100vh;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {font-family: "Allerta Stencil V2";
+  src: url("./font/AllertaStencil/@font-face/675575883cfcaf98de05009587842481.eot"); /* IE9*/
+  src: url("./font/AllertaStencil/@font-face/675575883cfcaf98de05009587842481.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("./font/AllertaStencil/@font-face/675575883cfcaf98de05009587842481.woff2") format("woff2"), /* chrome、firefox */
+  url("./font/AllertaStencil/@font-face/675575883cfcaf98de05009587842481.woff") format("woff"), /* chrome、firefox */
+  url("./font/AllertaStencil/@font-face/675575883cfcaf98de05009587842481.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("./font/AllertaStencil/@font-face/675575883cfcaf98de05009587842481.svg#Allerta Stencil V2") format("svg"); /* iOS 4.1- */
+}
+
+.leftuppercorner{
+  position: absolute;
+  font-size: 48px;
+  left:40px;
+  top: 40px;
+  font-family: 'Allerta Stencil V2' !important;
+  border-bottom: 1px solid #ffffffd3;
+  >text{
+    font-size: 50px;
+    fill: #ffffffd3;
+    user-select: none;
+  }
+}
+
+.rightuppercorner{
+  position: absolute;
+  font-size: 1.5em;
+  right:40px;
+  top: 40px;
+  color: 1px solid #ffffffd3;
+  >div{
+    font-size: 1em;
+    display: inline;
+    border-right: 1px solid #ffffffd3;
+    margin-right: 60px;
+    padding-right: 60px;
+    fill: #ffffffd3;
+    user-select: none;
+  }
+}
+
+.slogn{
+  position: absolute;
+  font-size: 2em;
+  transform: translate(-40%,-50%);
+  top: 50%;
+  right: 0;
+  &_first{
+    font-size: 2em;
+    color: rgb(255, 200, 225);
+  }
+}
+
+.sdw_path{
+  filter: drop-shadow(0px 0px 7px rgba(0,0,0,0.5)); 
+  &:hover{
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+  }
+}
