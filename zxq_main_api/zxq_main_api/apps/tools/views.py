@@ -3,6 +3,7 @@ from .serializers import TextCenterSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
+from utils import zxqutils
 
 
 # Create your views here.
@@ -17,7 +18,16 @@ class TextIndex(APIView):
 
     def post(self, request):
         data = request.data
-        return Response(data, status=200)
+        new_text_data = {
+            "data_series_number": data["data_series_number"],
+            "data_time": zxqutils.get_date_time(),
+            "data_content": data["data_content"]
+        }
+        serializer = TextCenterSerializer(data=new_text_data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.error_messages, status=status.HTTP_400_BAD_REQUEST)
 
 
 class TextDetail(APIView):
