@@ -34,7 +34,7 @@ class TextDetail(APIView):
 
     def get_data_entity(self, data_series_number):
         try:
-            text = TextCenter.objects.get(data_series_number=data_series_number)
+            text = TextCenter.objects.filter(data_series_number=data_series_number)
             return text
         except TextCenter.DoesNotExist:
             return None
@@ -42,7 +42,7 @@ class TextDetail(APIView):
     def get(self, request, data_series_number):
         entity = self.get_data_entity(data_series_number)
         if entity:
-            serializer = TextCenterSerializer(entity)
+            serializer = TextCenterSerializer(entity, many=True)
             return Response(serializer.data)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
