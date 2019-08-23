@@ -3,7 +3,7 @@ from .serializers import TextCenterSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-from utils import zxqutils
+from zxq_main_api.utils import zxqutils
 
 
 # Create your views here.
